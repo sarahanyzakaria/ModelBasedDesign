@@ -1,0 +1,35 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "factorial_whileLoop"};
+	this.sidHashMap["factorial_whileLoop"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<S1>"] = {sid: "factorial_whileLoop:7"};
+	this.sidHashMap["factorial_whileLoop:7"] = {rtwname: "<S1>"};
+	this.rtwnameHashMap["<Root>/In1"] = {sid: "factorial_whileLoop:1"};
+	this.sidHashMap["factorial_whileLoop:1"] = {rtwname: "<Root>/In1"};
+	this.rtwnameHashMap["<Root>/IC"] = {sid: "factorial_whileLoop:2"};
+	this.sidHashMap["factorial_whileLoop:2"] = {rtwname: "<Root>/IC"};
+	this.rtwnameHashMap["<Root>/While Iterator Subsystem"] = {sid: "factorial_whileLoop:7"};
+	this.sidHashMap["factorial_whileLoop:7"] = {rtwname: "<Root>/While Iterator Subsystem"};
+	this.rtwnameHashMap["<Root>/Out1"] = {sid: "factorial_whileLoop:6"};
+	this.sidHashMap["factorial_whileLoop:6"] = {rtwname: "<Root>/Out1"};
+	this.rtwnameHashMap["<S1>/In2"] = {sid: "factorial_whileLoop:13"};
+	this.sidHashMap["factorial_whileLoop:13"] = {rtwname: "<S1>/In2"};
+	this.rtwnameHashMap["<S1>/IC1"] = {sid: "factorial_whileLoop:14"};
+	this.sidHashMap["factorial_whileLoop:14"] = {rtwname: "<S1>/IC1"};
+	this.rtwnameHashMap["<S1>/Delay"] = {sid: "factorial_whileLoop:16"};
+	this.sidHashMap["factorial_whileLoop:16"] = {rtwname: "<S1>/Delay"};
+	this.rtwnameHashMap["<S1>/Delay1"] = {sid: "factorial_whileLoop:19"};
+	this.sidHashMap["factorial_whileLoop:19"] = {rtwname: "<S1>/Delay1"};
+	this.rtwnameHashMap["<S1>/LessThanOrEqual"] = {sid: "factorial_whileLoop:15"};
+	this.sidHashMap["factorial_whileLoop:15"] = {rtwname: "<S1>/LessThanOrEqual"};
+	this.rtwnameHashMap["<S1>/Product"] = {sid: "factorial_whileLoop:17"};
+	this.sidHashMap["factorial_whileLoop:17"] = {rtwname: "<S1>/Product"};
+	this.rtwnameHashMap["<S1>/While Iterator"] = {sid: "factorial_whileLoop:10"};
+	this.sidHashMap["factorial_whileLoop:10"] = {rtwname: "<S1>/While Iterator"};
+	this.rtwnameHashMap["<S1>/Out2"] = {sid: "factorial_whileLoop:18"};
+	this.sidHashMap["factorial_whileLoop:18"] = {rtwname: "<S1>/Out2"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();
